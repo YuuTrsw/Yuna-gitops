@@ -1,0 +1,4 @@
+- name: macOS 27 beta testers
+  description: Devices participating in the macOS 27 beta testing program
+  label_membership_type: manual
+  hosts: []
