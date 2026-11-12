@@ -182,7 +182,8 @@ policies:
 software:
   fleet_maintained_apps:
     # macOS apps
-    # …
+    - path: ../platforms/macos/software/Zoom.yml
+
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
     #   setup_experience: true

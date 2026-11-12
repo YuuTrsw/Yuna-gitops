@@ -1,0 +1,8 @@
+- slug: zoom/darwin
+  self_service: true
+  setup_experience: true
+  categories:
+    - Communication
+    - Productivity
+  post_install_script:
+    path: ../scripts/configure-zoom.sh
