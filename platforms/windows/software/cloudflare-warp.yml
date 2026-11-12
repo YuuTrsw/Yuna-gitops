@@ -1,0 +1,7 @@
+- url: https://downloads.cloudflareclient.com/v1/download/windows/ga
+  always_download: true
+  self_service: false
+  labels_include_any:
+    - Windows mobile devices
+  post_install_script:
+    path: ../scripts/warp-config.ps1

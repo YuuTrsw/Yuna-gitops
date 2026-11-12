@@ -184,9 +184,6 @@ software:
     # macOS apps
     - path: ../platforms/macos/software/Zoom.yml
 
-    # Windows apps
-    - path: ../platforms/windows/software/Cloudflare-WARP.yml
-
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
     #   setup_experience: true
