@@ -1,0 +1,10 @@
+{
+  "Type": "com.apple.configuration.softwareupdate.settings",
+  "Identifier": "EAB9A43F-6356-4600-BEEF-A40A6A6225B2",
+  "ServerToken": "C481CE9E-4170-4ACD-9A2C-5729943DA482",
+  "Payload": {
+    "Deferrals": {
+      "MajorPeriodInDays": 90
+    }
+  }
+}
