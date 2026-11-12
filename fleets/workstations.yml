@@ -16,6 +16,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 name: "💻 Workstations"
 controls:
+  enable_recovery_lock_password: true
+
   setup_experience:
     ###########################################################
     # Configure the macOS setup experience
@@ -66,6 +68,8 @@ controls:
   # ```  
   ###########################################################
   apple_settings:
+    enable_disk_encryption: true
+    enable_escrow_disk_encryption_key: true
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
       - paths: ../platforms/macos/declaration-profiles/exclude-beta-testers/*.json
@@ -73,8 +77,12 @@ controls:
           - "macOS 27 beta testers"
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
   windows_settings:
+    enable_disk_encryption: true
     configuration_profiles:
       - paths: ../platforms/windows/configuration-profiles/*.xml
+
+  linux_settings:
+    enable_escrow_disk_encryption_key: true
 
   ###########################################################
   # Managed disk encryption
