@@ -1,0 +1,5 @@
+- name: Uptime greater than 30 days
+  description: Devices that have been running for more than 30 days without rebooting
+  query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
+  label_membership_type: dynamic
+  platform: ""
