@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SyncML xmlns="SYNCML:SYNCML1.2">
+  <SyncBody>
+    <Replace>
+      <CmdID>1</CmdID>
+      <Item>
+        <Target>
+          <LocURI>./Vendor/MSFT/Personalization/DesktopImageUrl</LocURI>
+        </Target>
+        <Meta>
+          <Format xmlns="syncml:metinf">chr</Format>
+          <Type>text/plain</Type>
+        </Meta>
+        <Data></Data>
+      </Item>
+    </Replace>
+    <Final />
+  </SyncBody>
+</SyncML>
