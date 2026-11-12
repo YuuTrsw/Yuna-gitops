@@ -1,0 +1,9 @@
+- name: macOS - Cloudflare DNS configured
+  description: Ensures macOS workstations resolve DNS through Cloudflare at 1.1.1.1.
+  resolution: Fleet automatically configures Cloudflare DNS on every enabled network service.
+  query: SELECT 1 FROM dns_resolvers WHERE type = 'nameserver' AND address = '1.1.1.1' LIMIT 1;
+  platform: darwin
+  critical: true
+  run_script:
+    path: ../scripts/enforce-cloudflare-dns.sh
+  continuous_automations_enabled: true
