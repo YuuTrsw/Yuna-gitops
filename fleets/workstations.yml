@@ -15,6 +15,14 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 name: "💻 Workstations"
+
+# Managed requirements added after global-labels.yml:
+# - Require macOS 26.5 by 2026-12-31.
+# - Defer major macOS releases for 90 days, except for macOS 27 beta testers.
+# - Keep the Windows company wallpaper templates with the image path blank.
+# - Enforce disk encryption, escrow recovery keys, and enable macOS Recovery Lock.
+# - Enforce Cloudflare DNS (1.1.1.1) on macOS with automatic remediation.
+# - TODO: Enable failing-policy webhooks after a destination URL is provided.
 controls:
   enable_recovery_lock_password: true
 
@@ -126,8 +134,8 @@ controls:
   # > using `paths` below.
   ###########################################################
   scripts:
-    - paths: ../platforms/macos/scripts/*.sh
-    - paths: ../platforms/windows/scripts/*.ps1
+    - path: ../platforms/macos/scripts/enforce-cloudflare-dns.sh
+    - path: ../platforms/windows/scripts/set-company-wallpaper.ps1
     - paths: ../platforms/linux/scripts/*.sh
 
 ###########################################################
@@ -160,7 +168,8 @@ reports:
 # > using `paths` below.
 ###########################################################
 policies:
-  - paths: ../platforms/macos/policies/*.yml
+  - path: ../platforms/macos/policies/all-software-updates-installed.yml
+  - path: ../platforms/macos/policies/cloudflare-dns.yml
   - paths: ../platforms/windows/policies/*.yml
   - paths: ../platforms/linux/policies/*.yml
 
