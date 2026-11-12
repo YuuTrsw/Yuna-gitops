@@ -1,3 +1,5 @@
+# Official Zoom Workplace package for macOS (redirects to the latest IT installer):
+# https://zoom.us/client/latest/ZoomInstallerIT.pkg
 - slug: zoom/darwin
   self_service: true
   setup_experience: true
