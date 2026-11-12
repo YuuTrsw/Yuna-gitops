@@ -3,3 +3,9 @@
   query: SELECT 1 FROM uptime WHERE total_seconds >= 2592000;
   label_membership_type: dynamic
   platform: ""
+
+- name: Windows mobile devices
+  description: Portable Windows devices such as laptops, notebooks, tablets, and convertibles
+  query: SELECT 1 FROM chassis_info WHERE chassis_types LIKE '%Laptop%' OR chassis_types LIKE '%Notebook%' OR chassis_types LIKE '%Portable%' OR chassis_types LIKE '%Sub Notebook%' OR chassis_types LIKE '%Hand Held%' OR chassis_types LIKE '%Tablet%' OR chassis_types LIKE '%Convertible%' OR chassis_types LIKE '%Detachable%';
+  label_membership_type: dynamic
+  platform: windows

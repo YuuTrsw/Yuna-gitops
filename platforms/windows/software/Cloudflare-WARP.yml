@@ -1,0 +1,7 @@
+- slug: cloudflare-warp/windows
+  self_service: false
+  setup_experience: true
+  labels_include_any:
+    - Windows mobile devices
+  post_install_script:
+    path: ../scripts/configure-cloudflare-warp.ps1
